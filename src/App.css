@@ -14,7 +14,6 @@
   --orange:#fca61f;
   --bgColor:linear-gradient(106.23deg,#f99827,#f95f35 100%);
 }
-
 .App{
   overflow:hidden;
   color:var(--black);
@@ -53,4 +52,7 @@
   cursor:pointer;
   color:var(--orange);
   background: white;
+}
+::-webkit-scrollbar{
+  display: none;
 }

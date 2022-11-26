@@ -1,6 +1,6 @@
 import postPic1 from '../Images/girl1.jpg'
 import postPic2 from '../Images/girl2.webp'
-import postPic3 from '../Images/guy1.Jpg';
+// import postPic3 from '../Images/guy1.Jpg';
 
 
 export const PostsData = [
@@ -20,7 +20,7 @@ export const PostsData = [
 
     },
     {
-        img:postPic3,
+        img:postPic2,
         name: "Salena Gomez",
         desc: "At Archery Festival",
         likes: 800,
