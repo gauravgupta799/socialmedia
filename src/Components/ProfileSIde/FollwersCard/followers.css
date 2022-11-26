@@ -1,0 +1,30 @@
+.followersCard{
+    display:flex;
+    flex-direction: column;
+    gap:0.6rem;
+    overflow-y:scroll;
+    height:30vh;
+}
+.followersCard >h3{
+    margin-left: 7px;
+}
+.followers,.flsInnerDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:0.6rem;
+}
+.flsInnerDiv>img{
+    height: 50px;
+    width:50px;
+}
+.followerName{
+    display:flex;
+    flex-direction: column;
+}
+#follow-btn{
+    height:1.3rem;
+    width:3rem;
+    padding: 5px 12px;
+    margin-right:1px;
+}
