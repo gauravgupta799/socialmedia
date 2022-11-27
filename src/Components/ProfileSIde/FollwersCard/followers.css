@@ -3,7 +3,7 @@
     flex-direction: column;
     gap:0.6rem;
     overflow-y:scroll;
-    height:30vh;
+    height:34vh;
 }
 .followersCard >h3{
     margin-left: 7px;
