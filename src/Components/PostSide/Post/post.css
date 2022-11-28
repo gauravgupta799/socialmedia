@@ -28,7 +28,6 @@
     align-items: flex-start;
     cursor: pointer;
 }
-
 .Post>span{
     color:var(--gray);
 }

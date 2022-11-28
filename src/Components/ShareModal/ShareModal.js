@@ -21,5 +21,4 @@ function ShareModal({ shareModal, setShareModal }) {
 		</Modal>
 	);
 }
-
 export default ShareModal;
