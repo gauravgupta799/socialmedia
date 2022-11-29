@@ -9,8 +9,8 @@ function App() {
       <div className="blur blur1"></div>
       <div className="blur blur2"></div>
       {/* <Home/> */}
-      <Profile/>/
-      {/* <Auth/> */}
+      {/* <Profile/>/ */}
+      <Auth/>
     </div>
   );
 }
