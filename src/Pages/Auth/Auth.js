@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useDispatch } from "react";
 import "./auth.css";
 import Logo from "../../Images/logo.png";
+import { logIn, signUp } from "../../Redux/Actions/AuthAction";
 
 const Auth = () => {
 	return (
@@ -20,7 +21,7 @@ const Auth = () => {
 function SignUp() {
 	const [isSignup, setIsSignup] = useState(false);
 	const [confirmPass, setConfirmPass] = useState(false);
-
+    const dispatch = useDispatch();
 	const [data, setData] = useState({
 		firstname: "",
 		lastname: "",
@@ -35,12 +36,11 @@ function SignUp() {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		if (isSignup) {
-			if (data.password !== data.confirmPassword) {
-				setConfirmPass(true);
-				setTimeout(() => {
-					setConfirmPass(false);
-				}, 1000);
-			}
+			data.password === data.confirmPassword 
+			? dispatch(signUp(data))
+			: setConfirmPass(false)
+		}else{
+			dispatch(logIn(data))
 		}
 	};
 	const resetFrom = () => {
@@ -50,7 +50,7 @@ function SignUp() {
 			lastname: "",
 			username: "",
 			password: "",
-			confirmPassword: "",
+			confirmPassword: ""
 		});
 	};
 	const {firstname, lastname, username, password, confirmPassword} = data;	
@@ -61,6 +61,7 @@ function SignUp() {
 				{isSignup && (
 					<div>
 						<input
+						title="Enter yor name"
 							type='text'
 							placeholder='First Name'
 							name='firstname'
