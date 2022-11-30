@@ -11,7 +11,7 @@ const Post = () => {
 		<div className='postsContainer'>
 			{PostsData.map((post, id) => {
 				return (
-					<div className='Post'>
+					<div className='Post' key={id}>
 						<img src={post.img} alt='postImage' />
 						<div className='postRectWrapper'>
 							<img src={post.liked ? Like : NotLike} alt='likePng' />

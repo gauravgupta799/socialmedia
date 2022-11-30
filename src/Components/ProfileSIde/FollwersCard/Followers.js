@@ -17,7 +17,7 @@ const Followers = () => {
                                     <span>@AndrewThomas</span>
                                 </div>
                             </div>
-                            <bitton id="follow-btn"className="btn">Follow</bitton>
+                            <button id="follow-btn" className="btn">Follow</button>
                         </div>
                     )
                 })

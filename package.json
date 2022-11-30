@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://locahost:8800",
+  "proxy": "http://localhost:8800",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@iconscout/react-unicons": "^1.1.6",
@@ -15,6 +15,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.5",
+    "react-router-dom": "^6.4.3",
     "react-scripts": "5.0.1",
     "redux-thunk": "^2.4.2",
     "web-vitals": "^2.1.4"

@@ -53,6 +53,11 @@
   color:var(--orange);
   background: white;
 }
+.btn:disabled{
+  background:silver;
+  pointer-events: none;
+}
+
 ::-webkit-scrollbar{
   display: none;
 }

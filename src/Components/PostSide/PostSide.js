@@ -1,7 +1,6 @@
 import React from 'react'
 import Post from './Post/Post';
 import PostShare from './PostShare/PostShare';
-import "./postSide.css";
 
 const PostSide = () => {
   return (

@@ -23,8 +23,8 @@
     flex-direction: column;
 }
 #follow-btn{
-    height:1.3rem;
-    width:3rem;
-    padding: 5px 12px;
+    height:2rem;
+    width:5rem;
     margin-right:1px;
+    font-weight: bold;
 }

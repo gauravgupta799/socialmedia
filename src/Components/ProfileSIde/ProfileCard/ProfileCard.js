@@ -28,15 +28,15 @@ const ProfileCard = () => {
 						<span>10</span>
 						<span>Following</span>
 					</div>
-					{ProfilePage && (
-						<>
-							<div className="vl"></div>
-							<div className="follow">
-								<span>10</span>
-								<span>Posts</span>
-							</div>
-						</>	
-					)}
+						{ProfilePage && (
+							<>
+								<div className="vl"></div>
+								<div className="follow">
+									<span>10</span>
+									<span>Posts</span>
+								</div>
+							</>	
+						)}
 				</div>
 				<hr />
 			</div>
