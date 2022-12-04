@@ -13,8 +13,8 @@ import { UploadImage, uploadPost } from "../../../Redux/Actions/UploadAction";
 
 const PostShare = () => {
 	const [image, setImage] = useState(null);
-	const user = useSelector((state) => state.authReducer.authData.user)
-	const {profilePic} = user
+	const user = useSelector((state) => state.authReducer.authData.updatedUser)
+	// const {profilePic} = user
 	const loading =useSelector((state) => state.postReducer.uploading)
 	const imgRef = useRef();
 	const descRef = useRef();
@@ -54,7 +54,7 @@ const PostShare = () => {
 
 	return (
 		<div className='postShareContainer'>
-			<img src={profilePic ? ENV + profilePic : Profile} alt='profileImg' />
+			<img src={user?.profilePicture ? ENV + user?.profilePicture  : Profile} alt='profileImg' />
 			<div>
 				<input type='text' placeholder="What's happenning?" ref={descRef} required/>
 				<div className='postOptions'>

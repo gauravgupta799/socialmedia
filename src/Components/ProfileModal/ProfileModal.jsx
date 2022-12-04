@@ -18,7 +18,7 @@ function ProfileModal({ modalOpened, setOpenedModal,data }) {
 	const [coverImage, setCoverImage] = useState(null);
 	const dispatch = useDispatch();
 	const params = useParams();
-	const {user} = useSelector((state)=> state.authReducer.authData);
+	// const {user} = useSelector((state)=> state.authReducer.authData);
      
 	const handleChange=(e)=>{
        setFormData({...formData, [e.target.name]:e.target.value})
@@ -26,7 +26,7 @@ function ProfileModal({ modalOpened, setOpenedModal,data }) {
 
 	const handleImageChange =(e)=>{
         if(e.target.files && e.target.files[0]){
-			let img = e.taget.files[0];
+			let img = e.target.files[0];
 			e.target.name === "profileImage" ? setProfileImage(img):setCoverImage(img)
 		}
 	}
@@ -39,7 +39,7 @@ function ProfileModal({ modalOpened, setOpenedModal,data }) {
 			const filename = Date.now() + profileImage.name;
 			data.append("name", filename)
 			data.apppend("file", profileImage);
-			UserData.profilePicture = filename
+			UserData.profilePicture = filename;
 		}
 		try{
            dispatch(UploadImage(data));
@@ -58,7 +58,6 @@ function ProfileModal({ modalOpened, setOpenedModal,data }) {
 		 }catch(err){
 			 console.log(err)
 		 }
-
 		 dispatch(updateUser(params.id, UserData));
 		 setOpenedModal(false)
 	}

@@ -3,6 +3,7 @@ const initialState = {
 	authData: null,
 	loading: false,
 	error: false,
+	updateLoading:false
 };
 export const authReducer = (state = initialState, action) => {
 	switch (action.type) {
@@ -16,6 +17,13 @@ export const authReducer = (state = initialState, action) => {
 	    case "LOGOUT":
 			localStorage.clear();
 			return {...state, authData: null,loading: false, error: false}
+		case "UPDATING_START":
+			return {...state, updateLoading:true,error:false}
+		case "UPDATING_SUCCESS":
+			localStorage.setItem("profile", JSON.stringify({ ...action?.data}))
+			return {...state, authData:action.data, updateLoading:false, error:false}
+		case "UPDATING_FAILED":
+			return {...state, updateLoading:false, error:true };
 		default:
 			return state;
 	}

@@ -13,7 +13,7 @@ import { logout } from "../../Redux/Actions/AuthAction.js";
 const ProfileLeft = () => {
 	const [openedModal, setOpenedModal] = useState(false);
 	const [profileUser, setProfileUser] = useState({});
-	const user = useSelector((state) => state.authReducer.authData.user);
+	const user = useSelector((state) => state.authReducer.authData.updatedUser);
 	const dispatch = useDispatch();
 	const params = useParams();
 	const profileUserId = params.id;
