@@ -13,7 +13,7 @@ import { UploadImage, uploadPost } from "../../../Redux/Actions/UploadAction";
 
 const PostShare = () => {
 	const [image, setImage] = useState(null);
-	const {user} = useSelector((state) => state.authReducer.authData)
+	const user = useSelector((state) => state.authReducer.authData)
 	const loading =useSelector((state) => state.postReducer.uploading)
 	const imgRef = useRef();
 	const descRef = useRef();

@@ -1,12 +1,12 @@
 import React from 'react'
-import Post from './Post/Post';
+import Posts from './Posts/Posts.js';
 import PostShare from './PostShare/PostShare';
 
 const PostSide = () => {
   return (
     <div className="postSideContainer">
       <PostShare/>
-      <Post/>
+      <Posts/>
     </div>
   )
 }
