@@ -13,12 +13,13 @@ import { UploadImage, uploadPost } from "../../../Redux/Actions/UploadAction";
 
 const PostShare = () => {
 	const [image, setImage] = useState(null);
-	const user = useSelector((state) => state.authReducer.authData)
+	const user = useSelector((state) => state.authReducer.authData.user)
+	const {profilePic} = user
 	const loading =useSelector((state) => state.postReducer.uploading)
 	const imgRef = useRef();
 	const descRef = useRef();
     const dispatch = useDispatch();
-
+    const ENV = process.env.REACT_APP_PUBLIC_FOLDER;
 	const handleFile = (event) => {
 		if (event.target.files && event.target.files[0]) {
 			let img = event.target.files[0];
@@ -53,7 +54,7 @@ const PostShare = () => {
 
 	return (
 		<div className='postShareContainer'>
-			<img src={Profile} alt='profileImg' />
+			<img src={profilePic ? ENV + profilePic : Profile} alt='profileImg' />
 			<div>
 				<input type='text' placeholder="What's happenning?" ref={descRef} required/>
 				<div className='postOptions'>
