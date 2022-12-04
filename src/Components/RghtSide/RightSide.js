@@ -6,6 +6,7 @@ import Comment from "../../Images/comment.png";
 import { UilSetting } from "@iconscout/react-unicons";
 import TrendCard from "./TrendCards/TrendCard";
 import { Link } from "react-router-dom";
+// import Darkmode from "../DarkMode/Darkmode";
 
 const RightSide = () => {
 	return (
@@ -15,6 +16,7 @@ const RightSide = () => {
 				<UilSetting />
 				<img src={Noti} alt='Noti' />
 				<img src={Comment} alt='Comment' />
+				{/* <Darkmode/> */}
 			</div>
       <TrendCard/>
 		</div>

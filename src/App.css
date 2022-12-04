@@ -13,6 +13,8 @@
   --yellow:#f5c32c;
   --orange:#fca61f;
   --bgColor:linear-gradient(106.23deg,#f99827,#f95f35 100%);
+  --color-black:#21213f;
+  --color-light:#ffffff;
 }
 .App{
   overflow:hidden;

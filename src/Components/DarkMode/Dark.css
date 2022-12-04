@@ -1,0 +1,56 @@
+
+/* --color-black:#21213f;
+--color-light:#ffffff; */
+
+.CheckboxInput{
+    display:none;
+}
+.switch{
+    overflow:hidden;
+    display: flex;
+    width: 45px;
+    height: 25px;
+    /* padding: 3px; */
+    border-radius:15px;
+    background:#21213f;
+    cursor:pointer;
+}
+.handle{
+    position:relative;
+    width: 24px;
+    height: 24px;
+    transition:0.3s;
+}
+.handle::before, .handle::after{
+  content:"";
+  width: 24px;
+  display: block;
+  height: 24px;
+  border-radius:50%;
+}
+.handle::before{
+    background:#ffffff;
+    position: absolute;
+    top: 0;
+    left: 1px;
+}
+.handle::after{
+    background:#ffffff;
+    opacity: 0;
+    translate:-7px -7px;
+    position: absolute;
+    top: 0;
+    /* left: px; */
+}
+body.dark .switch{
+    background:#ffffff;
+}
+body.dark .handle{
+    translate:30px 0;
+}
+body.dark .handle::after{
+    opacity:1;
+}
+body.dark .handle::before{
+    background:#21213f;
+}

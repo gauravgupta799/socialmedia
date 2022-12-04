@@ -4,7 +4,7 @@ import Home from './Pages/Home/Home';
 import Profile from "./Pages/Profile/Profile";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { useSelector } from "react-redux";
-// import ProfileLeft from "./Components/Profile/ProfileLeft";
+// import Darkmode from "./Components/DarkMode/Darkmode";
 
 function App() {
 	const user = useSelector((state) => state.authReducer.authData);
@@ -12,6 +12,7 @@ function App() {
 		<div className='App'>
 			<div className='blur blur1'></div>
 			<div className='blur blur2'></div>
+			{/* <Darkmode/> */}
 			<Routes>
 				<Route path='/'
 					element={user ? <Navigate to='/home' /> : <Navigate to='auth' />}
