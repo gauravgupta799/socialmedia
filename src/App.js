@@ -8,6 +8,7 @@ import { useSelector } from "react-redux";
 
 function App() {
 	const user = useSelector((state) => state.authReducer.authData);
+	console.log("UsER", user)
 	return (
 		<div className='App'>
 			<div className='blur blur1'></div>
@@ -26,7 +27,6 @@ function App() {
 				<Route path='/profile/:id'
 					element={user ? <Profile/>:<Navigate to='../auth' />}
 				/>
-				
 			</Routes>
 		</div>
 	);

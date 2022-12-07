@@ -11,7 +11,7 @@ const ENV = process.env.REACT_APP_PUBLIC_FOLDER;
 
 const Post = ({ postData }) => {
 	const { image, desc, likes, _id} = postData;
-	const user = useSelector((state) => state.authReducer.authData.updatedUser);
+	const user = useSelector((state) => state.authReducer.authData.user);
 	const [liked, setLiked] = useState(likes.includes(user._id));
 	const [numLikes, setNumLikes] = useState(likes.length);
 

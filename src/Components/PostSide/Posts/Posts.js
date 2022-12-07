@@ -5,7 +5,7 @@ import getTimelinePosts from "../../../Redux/Actions/TimelineAction";
 import Post from "../Post/Post";
 
 const Posts = () => {
-	const user = useSelector((state) => state.authReducer.authData.updatedUser);
+	const user = useSelector((state) => state.authReducer.authData.user);
 	const {posts, loading } = useSelector((state) => state.postReducer);
     const dispatch = useDispatch();
 

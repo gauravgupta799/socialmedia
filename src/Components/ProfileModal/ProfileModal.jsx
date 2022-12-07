@@ -35,10 +35,10 @@ function ProfileModal({ modalOpened, setOpenedModal,data }) {
 		e.preventDefault();
 		let UserData = formData;
 		if(profileImage){
-			const data = new formData();
+			const data = new FormData();
 			const filename = Date.now() + profileImage.name;
 			data.append("name", filename)
-			data.apppend("file", profileImage);
+			data.append("file", profileImage);
 			UserData.profilePicture = filename;
 		}
 		try{
@@ -47,10 +47,10 @@ function ProfileModal({ modalOpened, setOpenedModal,data }) {
 			console.log(err)
 		}
 		if(coverImage){
-			const data = new formData();
+			const data = new FormData();
 			const filename = Date.now() + coverImage.name;
 			data.append("name", filename)
-			data.apppend("file", coverImage);
+			data.append("file", coverImage);
 			UserData.coverPicture = filename
 		}
 		try{
@@ -62,7 +62,6 @@ function ProfileModal({ modalOpened, setOpenedModal,data }) {
 		 setOpenedModal(false)
 	}
 
-	console.log("ForData", formData);
 	return (
 		<Modal
 			overlayColor={

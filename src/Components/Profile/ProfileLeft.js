@@ -13,25 +13,25 @@ import { logout } from "../../Redux/Actions/AuthAction.js";
 const ProfileLeft = () => {
 	const [openedModal, setOpenedModal] = useState(false);
 	const [profileUser, setProfileUser] = useState({});
-	const user = useSelector((state) => state.authReducer.authData.updatedUser);
+	const user = useSelector((state) => state.authReducer.authData.user);
 	const dispatch = useDispatch();
 	const params = useParams();
 	const profileUserId = params.id;
+	console.log("profileUserId: ", profileUserId);
 
 	useEffect(() => {
 		const fetchProfileUser = async () => {
 			if (profileUserId === user._id) {
 				setProfileUser(user);
-				// console.log("User", user)
-			} else {
+			}else {
 				const profileUser = await UserApi.getUser(profileUserId);
+				console.log("profileUSERE", profileUser);
 				setProfileUser(profileUser);
-				// console.log("prfileUser" ,profileUser);
 			}
 		};
 		fetchProfileUser();
 	}, [user]);
-
+	
 	return (
 		<div className='profileLeftContainer'>
 			<Search />

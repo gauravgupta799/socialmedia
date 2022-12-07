@@ -7,11 +7,11 @@ import profile from "../../../Images/profile.jpg";
 import PostShare from "../../PostSide/PostShare/PostShare";
 
 const ProfileCard = ({location}) => {
-	const user = useSelector((state) => state.authReducer.authData.updatedUser);
-	console.log("USerCard", user)
+	const user = useSelector((state) => state.authReducer.authData.user);
+	console.log("USERRRR", user)
 	const {firstname,lastname,coverPic, profilePic, worksAt, followers,following, _id} = user;
 	const posts = useSelector((state) => state.postReducer.posts)
-	console.log("UserD", firstname)
+	// console.log("Posts", posts)
 	const ENV = process.env.REACT_APP_PUBLIC_FOLDER;
 	
 	return (
@@ -46,7 +46,7 @@ const ProfileCard = ({location}) => {
 						<>
 							<div className='vl'></div>
 							<div className='follow'>
-								<span>{posts.filter((post) =>post.userId === _id).length}</span>
+								<span>{posts.filter((post) => post.userId === _id).length}</span>
 								<span>Posts</span>
 							</div>
 						</>
